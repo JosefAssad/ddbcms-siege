@@ -10,7 +10,6 @@ Prerequisites
 2. Siege
 3. Some DDB CMS sites you want to break
 4. One common login to the aforementioned DDB CMS sites
-5. A decent /usr/share/dict/words (see #1)
 
 You won't need to download DrupalSiege separately; I have taken the wildly irresponsible decision to bundle it with ddbcms-siege.
 
