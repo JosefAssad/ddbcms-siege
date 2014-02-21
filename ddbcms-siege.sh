@@ -7,6 +7,8 @@ LOG_FILE="./ddbcms-siege.log"
 #BASE_SITES="http://ballerup-tst.ddbcms.dk http://taarnby-tst.ddbcms.dk http://vejle-tst.ddbcms.d"
 #BASE_SITES="http://ballerup-tst.ddbcms.dk"
 BASE_SITES="http://ddbcms-kursus.dandigbib.org"
+# NODE_IDS contains the numerical IDs of nodes known to exist; space separates
+NODE_IDS="1 2 3 4 5 6 7 8 9 10"
 
 for BASE_SITE in $BASE_SITES
 do
@@ -41,6 +43,11 @@ do
     do
 	SEARCH_TERM=$(date '+%N' | md5sum | awk -F " " '{print $1}') # just various md5 hashes of the datetime
 	echo $BASE_SITE"/search/ting/"$SEARCH_TERM
+    done
+    # add known-to-exist nodes to the urls file
+    for NODE_ID in $NODE_IDS
+    do
+	echo $BASE_SITE"/node/"$NODE_ID
     done
 done > $URL_FILE
 
