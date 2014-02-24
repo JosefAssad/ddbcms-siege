@@ -48,6 +48,16 @@ do
     echo $BASE_SITE"/admin/config/development/strongarm" # big page
     echo $BASE_SITE"/admin/appearance/settings/ddbasic" # expect local dev here, good to have included for future
     echo $BASE_SITE"/admin/reports/status" # loading this hits many different parts of Drupal
+    echo $BASE_SITE"/admin/modules"
+    echo $BASE_SITE"/admin/content"
+    echo $BASE_SITE"/admin/workbench"
+    echo $BASE_SITE"/admin/workbench/content/all"
+    echo $BASE_SITE"/admin/arrangementer"
+    echo $BASE_SITE"/admin/biblioteker"
+    echo $BASE_SITE"/admin/bibliotek/hovedbiblioteket"
+    echo $BASE_SITE"/admin/nyheder"
+    echo $BASE_SITE"/admin/bibliotek/hovedbiblioteket/nyheder"
+    echo $BASE_SITE"/admin/temaer"
 
     # add known-to-exist nodes to the urls file
     for NODE_ID in $NODE_IDS
