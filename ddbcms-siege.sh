@@ -44,6 +44,11 @@ do
 	SEARCH_TERM=$(date '+%N' | md5sum | awk -F " " '{print $1}') # just various md5 hashes of the datetime
 	echo $BASE_SITE"/search/ting/"$SEARCH_TERM
     done
+    # TEST06: admin pages
+    echo $BASE_SITE"/admin/config/development/strongarm" # big page
+    echo $BASE_SITE"/admin/appearance/settings/ddbasic" # expect local dev here, good to have included for future
+    echo $BASE_SITE"/admin/reports/status" # loading this hits many different parts of Drupal
+
     # add known-to-exist nodes to the urls file
     for NODE_ID in $NODE_IDS
     do
