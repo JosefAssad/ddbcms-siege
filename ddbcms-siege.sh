@@ -59,7 +59,7 @@ do
     echo $BASE_SITE"/admin/bibliotek/hovedbiblioteket/nyheder"
     echo $BASE_SITE"/admin/temaer"
 
-    # add known-to-exist nodes to the urls file
+    # TEST07: add known-to-exist nodes to the urls file
     for NODE_ID in $NODE_IDS
     do
 	echo $BASE_SITE"/node/"$NODE_ID
